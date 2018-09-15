@@ -18,5 +18,6 @@
 * 运行tensorboard --logdir=l:\Pieces\cifar10_train , 然后在浏览器中地址输入提示的url即可 可视化训练结果。
 
 用法示例：CCifar10 binData;	binData.img2bin( "c:/dl/Pieces"); //即在目录Pieces下生成数据文件与data_meta.txt文件。
+![](http://www.liujh168.com/wp-content/uploads/2018/03/Match-X0Y0F0.004400.jpg)
 
-作者：潇湘棋士 qq: 77156973 欢迎交流。
+作者：[潇湘棋士](www.liujh168.com) qq: 77156973 欢迎交流。
