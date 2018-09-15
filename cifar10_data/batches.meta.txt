@@ -1,0 +1,10 @@
+advisor
+bishop_b
+bishop_r
+cannon
+king_b
+king_r
+knight
+panw_r
+pawn_b
+rook
