@@ -1,12 +1,33 @@
 #include <Windows.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <iostream>
 #include <fstream>
+#include <iostream>
+#include <cstdio>
+#include <cstdlib>
+#include <string>
 #include <vector>
 
-#include "opencv2/legacy/legacy.hpp"
+#include "opencv2\opencv.hpp"
+#include "opencv2\legacy\legacy.hpp"
+#include "opencv2/nonfree/nonfree.hpp"
+#include "opencv2\ml\ml.hpp"
+
 #include "img2bin.h"
+
+using namespace cv;
+//using namespace ml;
+
+//自动判断识别OpenCV的版本号，并据此添加对应的依赖库（.lib文件）的方法
+#define CV_VERSION_ID       CVAUX_STR(CV_MAJOR_VERSION) CVAUX_STR(CV_MINOR_VERSION) CVAUX_STR(CV_SUBMINOR_VERSION)
+#ifdef _DEBUG
+#define cvLIB(name) "opencv_" name CV_VERSION_ID "d"
+#else
+#define cvLIB(name) "opencv_" name CV_VERSION_ID
+#endif
+#pragma comment( lib, cvLIB("core") )
+#pragma comment( lib, cvLIB("imgproc") )
+#pragma comment( lib, cvLIB("highgui") )
+#pragma comment( lib, cvLIB("ml") )
+#pragma comment( lib, cvLIB("calib3d") )
 
 #pragma warning(disable: 4996)		// Function _ftime() may be unsafe
 
