@@ -1,5 +1,14 @@
+'''
+	本项目借用cifar10示例代码识别中国象棋棋子
+	python 3.8.3 tensorflow 2.3.0 环境调试通过 2020年9月26日
+'''
+
 # 一、如何开始训练与预测：
 把数据集文件放入cifar10_data目录下即可开始训练。 训练集与测试集各1个。
+终端运行：python cifar10_train 即可开始训练
+用tensorboard查看结果2步走： 
+1、终端运行 "tensorboad --logdir=d:\chess\cifar10_train" 
+2、浏览地址：“localhost:6006” 
 
 # 二、如何制作类cifar10数据集：
 cout<<"未找到数据目录 train 或 test "<<endl;

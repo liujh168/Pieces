@@ -7,7 +7,8 @@ from __future__ import print_function
 import os
 
 from six.moves import xrange  # pylint: disable=redefined-builtin
-import tensorflow as tf
+import tensorflow.compat.v1 as tf  	
+tf.disable_eager_execution()  #tensorflow2.0运行1.0的代码会报错误：“AttributeError: module 'tensorflow' has no attribute 'placeholder'” 		
 
 # Process images of this size. Note that this differs from the original CIFAR
 # image size of 32 x 32. If one alters this number, then the entire model

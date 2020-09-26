@@ -26,7 +26,9 @@ import sys
 import tarfile
 
 from six.moves import urllib
-import tensorflow as tf
+
+import tensorflow.compat.v1 as tf  	
+tf.disable_eager_execution()  #tensorflow2.0运行1.0的代码会报错误：“AttributeError: module 'tensorflow' has no attribute 'placeholder'” 		
 
 import cifar10_input
 
@@ -229,7 +231,7 @@ def inference(images):
   with tf.variable_scope('local3') as scope:
     # Move everything into depth so we can perform a single matrix multiply.
     reshape = tf.reshape(pool2, [images.get_shape().as_list()[0], -1])
-    dim = reshape.get_shape()[1].value
+    dim = reshape.get_shape()[1]
     weights = _variable_with_weight_decay('weights', shape=[dim, 384],
                                           stddev=0.04, wd=0.004)
     biases = _variable_on_cpu('biases', [384], tf.constant_initializer(0.1))

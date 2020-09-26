@@ -9,7 +9,8 @@ import math
 import time
 
 import numpy as np
-import tensorflow as tf
+import tensorflow.compat.v1 as tf  	
+tf.disable_eager_execution()  #tensorflow2.0运行1.0的代码会报错误：“AttributeError: module 'tensorflow' has no attribute 'placeholder'” 		
 
 import cifar10
 

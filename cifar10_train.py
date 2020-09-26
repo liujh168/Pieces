@@ -5,7 +5,9 @@ from __future__ import print_function
 from datetime import datetime
 import time
 
-import tensorflow as tf
+#import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_eager_execution()   #tensorflow2.0运行1.0的代码会报错误：“AttributeError: module 'tensorflow' has no attribute 'placeholder'”
 
 import cifar10
 
@@ -14,7 +16,9 @@ FLAGS = tf.app.flags.FLAGS
 tf.app.flags.DEFINE_string('train_dir', 'cifar10_train',
                            """Directory where to write event logs """
                            """and checkpoint.""")
-tf.app.flags.DEFINE_integer('max_steps', 100000,
+#tf.app.flags.DEFINE_integer('max_steps', 100000,
+#                            """Number of batches to run.""")
+tf.app.flags.DEFINE_integer('max_steps', 2000,
                             """Number of batches to run.""")
 tf.app.flags.DEFINE_boolean('log_device_placement', False,
                             """Whether to log device placement.""")
