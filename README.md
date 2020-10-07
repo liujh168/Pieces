@@ -1,7 +1,7 @@
 '''
 	本项目借用cifar10示例代码识别中国象棋棋子
 	python 3.8.3 tensorflow 2.3.0 环境调试通过 2020年9月26日
-	cifar-10-binary.tar 是棋子训练数据集
+	cifar-10-binary.tar 是已生成好的棋子训练数据集
 '''
 
 # 一、如何开始训练与预测：
@@ -33,3 +33,7 @@ cout<<"4、当前目录下也3个数据集文件的备份，train和test目录�
 用法示例：CCifar10 binData;	binData.img2bin( "c:/dl/Pieces"); //即在目录Pieces下生成数据文件与data_meta.txt文件。
 
 作者：潇湘棋士 qq: 77156973 欢迎交流。
+
+
+解决git 下乱码问题： https://www.zhihu.com/question/57162172
+		https://www.playpi.org/2019031901.html
