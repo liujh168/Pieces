@@ -1,0 +1,10 @@
+cifar10_train/
+_pycache_
+
+*.rar
+*.zip
+*.bin
+*.tar
+*.gz
+*.pyc
+

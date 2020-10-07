@@ -26,7 +26,7 @@ import sys
 import tarfile
 
 from six.moves import urllib
-
+#修改以适应TF2.0
 import tensorflow.compat.v1 as tf  	
 tf.disable_eager_execution()  #tensorflow2.0运行1.0的代码会报错误：“AttributeError: module 'tensorflow' has no attribute 'placeholder'” 		
 
